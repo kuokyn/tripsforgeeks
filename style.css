@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+/* ======= НАСТРОЙКИ ШРИФТОВ =======  */
 
-@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 @font-face {
     font-family: 'Gotham';
@@ -31,6 +31,8 @@
 }
 
 
+/* ======= ОБЩИЕ СТИЛИ =======  */
+
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +41,6 @@
 
 body {
     font-family: 'Gotham', sans-serif;
-    /*временно*/
 }
 
 a {
@@ -69,6 +70,82 @@ a {
     margin-top: 150px;
     width: 100%;
 }
+
+
+.card {
+    border: 4px solid #292C31;
+    display: flex;
+    max-height: fit-content;
+    width: 100%;
+    background-color: #ffffff;
+    /* margin-bottom: 10px; */
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-img {
+    max-width: 312px;
+    height: 100%;
+}
+
+.card-date {
+    color: #F0C25F;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.card-descr {
+    opacity: 80%;
+    font-size: 18px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.red {
+    color: rgba(255, 70, 86, 1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.running-stroke {
+    text-transform: uppercase;
+    font-size: 36px;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    /* position: absolute; */
+}
+
+.opacity0 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 0.7s ease-out;
+    transition-delay: 0.4s;
+}
+
+.active {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+
+/* ======= HERO STYLES =======  */
 
 .hero {
     width: 100%;
@@ -124,6 +201,9 @@ a {
     color: rgba(58, 167, 115, 1);
     border-color: rgba(58, 167, 115, 1);
 }
+
+
+/* ======= HEADER STYLES =======  */
 
 .header {
     height: 120px;
@@ -187,6 +267,9 @@ a {
 .sm-item {
     margin-left: 20px;
 }
+
+
+/* ======= EVENT WINDOW STYLES =======  */
 
 .event-popup {
     display: flex;
@@ -252,7 +335,7 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-.event-popup-btn:hover{
+.event-popup-btn:hover {
     gap: 30px;
 }
 
@@ -260,21 +343,25 @@ a {
     position: absolute;
     bottom: 0px;
     left: -120px;
-	transition: 2s ease-out;
+    transition: 2s ease-out;
     animation: moving 2.2s infinite;
 }
 
 @keyframes moving {
-	0% {
-	  	transform: translateY(20px);
-	}
-	50% {
-	  	transform: translateY(-20px);
-	}
-	100% {
-	  	transform: translateY(20px);
-	}
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
 }
+
+/* ======= CONTENT STYLES =======  */
 
 .content-container {
     max-width: 1440px;
@@ -292,11 +379,13 @@ a {
     gap: 50px;
 }
 
+
+/* ======= NEWS STYLES =======  */
+
 .last-news {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     width: 100%;
     gap: 20px;
 }
@@ -308,7 +397,6 @@ a {
     border-bottom: 10px solid rgba(160, 82, 209, 1);
     border-left: 10px solid rgba(160, 82, 209, 1);
     background-color: #ffffff;
-    /* width: 50%; */
 }
 
 .title h2 {
@@ -340,43 +428,6 @@ a {
     width: 100%;
 }
 
-.card {
-    border: 4px solid #292C31;
-    display: flex;
-    max-height: fit-content;
-    width: 100%;
-    background-color: #ffffff;
-    /* margin-bottom: 10px; */
-}
-
-.card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-}
-
-.card-img {
-    max-width: 312px;
-    height: 100%;
-}
-
-.card-date {
-    color: #F0C25F;
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 10px;
-}
-
-.card-descr {
-    opacity: 80%;
-    font-size: 18px;
-}
-
 .all-news-link {
     display: flex;
     justify-content: flex-end;
@@ -384,20 +435,20 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-.all-news-link img{
+.all-news-link img {
     /* margin-right: -10px; */
     transition: all 0.2s ease-in-out;
 }
 
-.all-news-link:hover img{
+.all-news-link:hover img {
     margin-right: -10px;
 }
 
-.all-news-link a{
+.all-news-link a {
     transition: all 0.2s ease-in-out;
 }
 
-.all-news-link:hover{
+.all-news-link:hover {
     gap: 30px;
 }
 
@@ -422,6 +473,8 @@ a {
     font-size: 24px;
 }
 
+
+/* ======= YOU MIGHT LIKE STYLES =======  */
 
 .yml {
     display: flex;
@@ -485,15 +538,16 @@ a {
 }
 
 .pikachu2 {
-    /* position: absolute; */
     margin-top: -150px;
-    /* margin-right: -50px; */
     width: 150px;
     height: 150px;
     transition: 2s ease-out;
     animation: moving 2.2s infinite;
 
 }
+
+
+/* ======= TOURS STYLES =======  */
 
 .tours {
     display: flex;
@@ -529,10 +583,8 @@ a {
     color: #EFEFEF;
 }
 
-.vertical {
-    display: flex;
-    flex-direction: column;
-}
+
+/* ======= FAQ STYLES =======  */
 
 .faq {
     display: flex;
@@ -594,7 +646,6 @@ input.tgg-title {
     color: var(--primary-soft-color)
 }
 
-/* onclick "" */
 .faq-item .tgg-title:checked+div>label>h2 {
     font-weight: 700;
 }
@@ -604,17 +655,14 @@ input.tgg-title {
     transform: rotate(180deg);
 }
 
-/* main content, acordion text effect */
-
 .faq-item .tgg-title:checked~.faq-item-content {
     will-change: max-height;
     padding: 20px 0;
     max-height: 120px;
 }
 
-.red {
-    color: rgba(255, 70, 86, 1);
-}
+
+/* ======= REVIEWS STYLES =======  */
 
 .reviews {
     display: flex;
@@ -693,6 +741,9 @@ input.tgg-title {
     font-family: 'Georgia', serif;
 }
 
+
+/* ======= EMAIL-BLOCK STYLES =======  */
+
 .email {
     z-index: 1;
     height: 150px;
@@ -762,6 +813,9 @@ input.tgg-title {
     left: 600px;
 }
 
+
+/* ======= FOOTER STYLES =======  */
+
 footer {
     display: flex;
     align-items: center;
@@ -804,32 +858,6 @@ footer {
     align-items: center;
     color: rgba(239, 239, 255, 0.3);
     margin-top: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.running-stroke {
-    text-transform: uppercase;
-    font-size: 36px;
-    overflow: hidden;
-    max-width: 100%;
-    white-space: nowrap;
-    /* position: absolute; */
-}
-
-.opacity0 {
-    opacity: 0;
-    transform: translateY(-100px);
-    transition: all 0.7s ease-out;
-    transition-delay: 0.4s;
-}
-
-.active {
-	opacity: 1;
-	transform: translate(0px, 0px);
 }
 
 @media screen and (min-width: 1440px) {
