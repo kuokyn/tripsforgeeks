@@ -13,11 +13,11 @@
 #### Что было использовано в проекте:
 <p align="left">
   <ul>
-    <li>Макет был выполнен по проекту в Figma: <a href="https://vk.com/away.php?to=https%3A%2F%2Fwww.figma.com%2Ffile%2FmS21AfGLSKnxsqWN8FgfNu%2F37%3Ftype%3Ddesign%26node-id%3D9%253A60%26t%3DebT9cuvGwBN0vJuQ-1&cc_key=" target="_blank">Макет в Figma</a></li>
+    <li>Макет был выполнен по проекту в Figma: <a href="https://www.figma.com/file/mS21AfGLSKnxsqWN8FgfNu/37?type=design&node-id=102%3A2&t=WChcD7SlBM4sEuji-1" target="_blank">Макет в Figma</a></li>
     <li>HTML - более 600 строк</li>
     <li>CSS - более 800 строк</li>
     <li>JS - более 30 строк</li>
-    <li>Проект был развернут на GitHub Pages (не все изображения отображаются, но функциональность сохранена)</li>
+    <li>Проект был <a href="https://kuokyn.github.io/tripsforgeeks/" target="_blank">развернут на GitHub Pages</a></li>
     <li>Скриншоты макета приведены ниже</li>
   </ul>
 </p>
