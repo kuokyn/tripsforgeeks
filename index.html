@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
     <title>TFG</title>
 </head>
 
@@ -69,7 +70,7 @@
             <div class="content-container">
                 <div class="posts section">
                     <div class="last-news">
-                        <div class="title-container">
+                        <div class="title-container anim-items opacity0">
                             <div class="title-line"></div>
                             <div class="title">
                                 <div class="title-bg">
@@ -78,7 +79,7 @@
                             </div>
                             <div class="title-line"></div>
                         </div>
-                        <div class="card">
+                        <div class="card anim-items opacity0">
                             <div class="card-img">
                                 <img src="./img/card1.png" class="card-img" alt="">
                             </div>
@@ -93,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card anim-items opacity0">
                             <div class="card-img">
                                 <img src="./img/card2.png" class="card-img" alt="">
                             </div>
@@ -108,7 +109,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card anim-items opacity0">
                             <div class="card-img">
                                 <img src="./img/card3.png" class="card-img" alt="">
                             </div>
@@ -130,25 +131,26 @@
                     <div class="yml">
                         <!-- событие года -->
                         <div class="event-popup">
-                            <img src="/img/hero-pikachu.png" alt="pikachu">
+                            <img class="pikachu1" src="/img/hero-pikachu.png" alt="pikachu">
                             <div class="event-popup-container">
                                 <div class="event-popup-title">
                                     <h2>ЯРКОЕ СОБЫТИЕ ГОДА</h2>
                                 </div>
                                 <div class="event-popup-text">
-                                    <b>1025</b>
+                                    <b>1023</b>
                                     <p>человек будут в прямом эфире онлайн на встрече со своими любимыми героями!
                                     </p>
                                 </div>
                                 <div class="event-popup-btn btn">
-                                    <a href="#" class="event-popup-link">Интересно</a>
+                                    <a href="#" class="event-popup-link">Интересно </a><img src="/img/arrow-red.png"
+                                        alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="yml-title">
+                        <div class="yml-title anim-items opacity0">
                             <h2>ЭТО ТОЖЕ ИНТЕРЕСНО</h2>
                         </div>
-                        <div class="yml-card-container">
+                        <div class="yml-card-container anim-items opacity0">
                             <div class="card-yml">
                                 <span class="tag-yml">ФИЛЬМЫ</span>
                                 <p class="card-yml-title">Топ 10 фильмов 2022 года, которые должны посмотреть все</p>
@@ -173,16 +175,16 @@
                     </div>
                 </div>
                 <div class="pikachu-wrap"">
-                    <img src="/img/pikachu2.png" class="pikachu2" alt="pikachu">
+                    <img src=" /img/pikachu2.png" class="pikachu2" alt="pikachu">
                 </div>
-                
+
             </div>
             <div class="running-stroke section">
                 <div class="rs-1">
-                    ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+                    ЭТОБЕГУЩАЯСТРОКАЗДЕСЬБУДЕТКАКОЙНИБУДЬТЕКСТНОПОКАЧТОМОЖЕТЕПРОЧИТАТЬТОЧТОЗДЕСЬНАПИСАНОЯНАДЕЮСЬТУТВСЁОЧЕНЬПОНЯТНО
                 </div>
             </div>
-            <div class="tours section">
+            <div class="tours section anim-items opacity0">
                 <div class="content-container tours">
                     <div class="title-container">
                         <div class="title-line-white"></div>
@@ -249,7 +251,7 @@
                 </div>
             </div>
             <div class="content-container">
-                <div class="faq section">
+                <div class="faq section anim-items opacity0">
                     <div class="title-container">
                         <div class="title-line"></div>
                         <div class="title">
@@ -473,10 +475,10 @@
             </div>
             <div class="running-stroke section">
                 <div class="rs-1">
-                    ЭТОБЕГУЩАЯСТРОКАЗДЕСЬБУДЕТКАКОЙНИБУДЬТЕКСТНОПОКАЧТОМОЖЕТЕПРОЧИТАТЬТОЧТОЗДЕСЬНАПИСАНОЯНАДЕЮСЬТУТВСЁОЧЕНЬПОНЯТНО
+                    ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
                 </div>
             </div>
-            <div class="reviews section">
+            <div class="reviews section anim-items opacity0">
                 <div class="content-container reviews">
                     <div class="title-container">
                         <div class="title-line"></div>
@@ -653,7 +655,40 @@
         </div>
     </footer>
     </div>
+    <script>
+        const animItems = document.querySelectorAll('.anim-items');
+        if (animItems.length > 0) {
+            window.addEventListener('scroll', animOnScroll);
+            function animOnScroll() {
+                for (let index = 0; index < animItems.length; index++) {
+                    const animItem = animItems[index];
+                    const animItemHeight = animItem.offsetHeight;
+                    const animItemOffset = offset(animItem).top;
+                    const animStart = 4;
 
+                    let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+                    if (animItemHeight > window.innerHeight) {
+                        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                    }
+
+                    if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+                        animItem.classList.add('active');
+                    } else {
+                        animItem.classList.remove('active');
+                    }
+                }
+            }
+            function offset(el) {
+                const rect = el.getBoundingClientRect(),
+                    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+
+            }
+            animOnScroll();
+        }
+    </script>
 </body>
 
 </html>
